@@ -1,0 +1,14 @@
+@baseUrl = https://ramy-func-lab1.azurewebsites.net/api
+# Uncomment the line below and comment the one above to test locally
+# @baseUrl = http://localhost:7071/api
+
+### Test GET request in Cloud
+GET {{baseUrl}}/TextAnalyzer?text=Azure is amazing in the cloud!
+
+### Test POST request in Cloud
+POST {{baseUrl}}/TextAnalyzer
+Content-Type: application/json
+
+{
+  "text": "This request is being processed by a live Azure Function."
+}
